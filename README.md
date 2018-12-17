@@ -4,11 +4,11 @@ The official browser extension for TunePlay is available for Google Chrome, Mozi
 
 ## Download
 
-[Google Chrome version](https://github.com/FreekBes/tuneplay-extensions/archive/master.zip)
+**Select your browser:**
+* [Google Chrome](https://github.com/FreekBes/tuneplay-extensions/archive/master.zip)
+* [Mozilla Firefox](https://www.tuneplay.net/downloads/tuneplay-for-firefox.xpi)
+* [Opera](https://www.tuneplay.net/downloads/tuneplay-for-opera.nex)
 
-[Mozilla Firefox version](https://www.tuneplay.net/downloads/tuneplay-for-firefox.xpi)
-
-[Opera version](https://www.tuneplay.net/downloads/tuneplay-for-opera.nex)
 
 ## Installation
 
@@ -21,10 +21,21 @@ The official browser extension for TunePlay is available for Google Chrome, Mozi
 
 > Currently, all Windows users will always see an information bubble with "Disable developer mode extensions" when they start Chrome or open a new incognito window, which is really annoying. The only way for Windows users to use unpacked extensions without such dialogs is to switch to Chrome on the developer channel, by installing [the developer version of Google Chrome](https://www.google.com/chrome/browser/index.html?extra=devchannel#eula).
 
-### Firefox
-1. Click on the download link above in Firefox.
+### Mozilla Firefox
+1. Open this page in Mozilla Firefox, then click on the download link above.
 2. In the dialog, press 'Allow' or 'Trust' or anything like this. Then choose 'Install'.
 
 ### Opera
 1. Navigate to the downloaded `.nex`-file in the File Explorer.
-2. Open the file by double clicking, then press "Install".
+2. Open the file by double clicking.
+3. When Opera opens, click on the button 'Go to extensions' (in the banner up top).
+4. Press the 'Install' button next to TunePlay (and then choose 'Yes, install').
+
+
+## Updating the extension
+
+### Google Chrome & Opera
+When an update is available, the extension will notify you when you open it. A button will appear up top, letting you know an update is available. Upon clicking this button, the update will then start downloading. Please wait for this to finish (this should not take too long). When the download is finished, the download button will turn into an 'Install' button. Press this button to install the update.
+
+### Mozilla Firefox
+The Firefox version of TunePlay will install updates automatically!
