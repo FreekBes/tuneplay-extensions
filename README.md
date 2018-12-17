@@ -4,11 +4,11 @@ The official browser extension for TunePlay is available for Google Chrome, Mozi
 
 ## Download
 
-[![Google Chrome](https://github.com/FreekBes/tuneplay-extensions/raw/master/images/chrome.png | width=100)Google Chrome](https://github.com/FreekBes/tuneplay-extensions/archive/master.zip)
+![Google Chrome](https://github.com/FreekBes/tuneplay-extensions/raw/master/images/chrome.png | width=100)[Google Chrome](https://github.com/FreekBes/tuneplay-extensions/archive/master.zip)
 
-[![Mozilla Firefox](https://github.com/FreekBes/tuneplay-extensions/raw/master/images/firefox.png | width=100)Mozilla Firefox](https://www.tuneplay.net/downloads/tuneplay-for-firefox.xpi)
+![Mozilla Firefox](https://github.com/FreekBes/tuneplay-extensions/raw/master/images/firefox.png | width=100)[Mozilla Firefox](https://www.tuneplay.net/downloads/tuneplay-for-firefox.xpi)
 
-[![Opera](https://github.com/FreekBes/tuneplay-extensions/raw/master/images/opera.png | width=100)Opera](https://www.tuneplay.net/downloads/tuneplay-for-opera.nex)
+![Opera](https://github.com/FreekBes/tuneplay-extensions/raw/master/images/opera.png | width=100)[Opera](https://www.tuneplay.net/downloads/tuneplay-for-opera.nex)
 
 ## Installation
 
