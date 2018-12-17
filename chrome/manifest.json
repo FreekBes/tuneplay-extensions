@@ -1,0 +1,49 @@
+{
+	"manifest_version": 2,
+	"name": "TunePlay",
+	"short_name": "TunePlay",
+	"version": "2.7",
+	"version_name": "2.7",
+	"homepage_url": "https://www.tuneplay.net",
+	
+	"description": "The official TunePlay extension, which lets you easily add tracks from YouTube, Soundcloud and Mixcloud. Also adds a handy search function in the address bar: just start your search with 'tuneplay'!",
+	"icons": {
+		"16": "images/logo16.png",
+		"32": "images/logo32.png",
+		"48": "images/logo48.png",
+		"128": "images/logo128.png"
+	},
+	
+	"permissions": [
+		"tabs",
+		"cookies",
+		"downloads",
+		"downloads.open",
+		"downloads.shelf",
+		"storage",
+		"*://*.tuneplay.net/*",
+		"*://*.soundcloud.com/*",
+		"*://*.youtube.com/*",
+		"*://*.mixcloud.com/*"
+	],
+	"browser_action": {
+		"default_icon": {
+			"16": "images/logo16.png",
+			"24": "images/logo32.png",
+			"32": "images/logo48.png"
+		},
+		"default_title": "TunePlay",
+		"default_popup": "popup.html"
+	},
+	
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	
+	"incognito": "spanning",
+	
+	"omnibox": {
+		"keyword": "tuneplay"
+	}
+}

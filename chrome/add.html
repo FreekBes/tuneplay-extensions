@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				margin: 0px;
+				padding: 10px 0px;
+				background-color: #1A1A1A;
+				color: #EDEDED;
+				transition: 0.1s;
+				min-width: 200px;
+				max-height: 324px;
+				overflow-y: auto;
+				overflow-x: hidden;
+				font-family: "Segoe UI", Tahoma, Arial, Helvetica, sans-serif;
+			}
+			.title {
+				display: block;
+				cursor: default;
+				padding: 0px 14px 8px 14px;
+				line-height: 20px;
+				font-size: 16px;
+				text-align: center;
+			}
+			.imagecontainer {
+				display: block;
+				padding: 4px;
+				margin: 0px;
+				height: 324px;
+				text-align: center;
+			}
+			.image {
+				display: block;
+				margin: 0 auto;
+				width: 316px;
+				height: 316px;
+				background-color: rgba(0,0,0,0);
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			.button {
+				display: block;
+				cursor: pointer;
+				padding: 8px 14px;
+				line-height: 20px;
+				font-size: 14px;
+				background-color: rgba(255,255,255,0);
+				transition: 0.3s;
+				white-space: nowrap;
+			}
+			.button:hover {
+				background-color: rgba(255,255,255,0.2);
+				transition: 0.05s;
+			}
+			.button > img {
+				margin-right: 14px;
+				height: 20px;
+				width: 20px;
+				vertical-align: middle;
+				display: inline-block;
+			}
+			.button > img.noradio {
+				margin-right: 8px;
+				height: 40px;
+				width: 40px;
+				vertical-align: middle;
+			}
+			.button > span {
+				vertical-align: middle;
+				display: inline-block;
+				text-align: left;
+				white-space: auto;
+			}
+			.next {
+				display: block;
+				cursor: pointer;
+				float: right;
+				text-align: right;
+				padding: 3px 0px 6px 6px;
+				margin: 14px;
+				background-color: #FFCB2E;
+				color: #111111;
+				transition: 0.3s;
+				text-transform: uppercase;
+				font-size: 15px;
+				font-weight: 500;
+				border-radius: 3px;
+			}
+			.next.disabled {
+				cursor: not-allowed;
+				background-color: #C79B00;
+			}
+			.next:not(.disabled):hover {
+				background-color: #FFFE65;
+				transition: 0.05s;
+			}
+			.next > span {
+				vertical-align: middle;
+			}
+			.next > img {
+				height: 20px;
+				width: 20px;
+				vertical-align: middle;
+			}
+			#loading {
+				text-align: center;
+				padding: 14px;
+			}
+			#loadingtext {
+				display: inline-block;
+				text-align: center;
+				font-size: 14px;
+				color: #EDEDED;
+				padding: 14px 0px;
+			}
+			.spinner {
+				display: inline-block;
+				width: 60px;
+				height: 60px;
+				margin: 0px;
+				padding: 0px;
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				border: 7px solid rgba(0,0,0,0);
+				border-top: 7px solid #FFCB2E;
+				border-radius: 30px;
+				animation: spin 0.8s linear infinite;
+			}
+			@keyframes spin {
+				0% { transform: rotate(0deg); }
+				100% { transform: rotate(360deg); }
+			}
+			/* SELECTION */
+			::-moz-selection {
+				color: #111;
+				background-color: #FFCB2E;
+				text-shadow: initial;
+			}
+			::selection {
+				color: #111;
+				background-color: #FFCB2E;
+				text-shadow: initial;
+			}
+			/* SCROLLBAR */
+			::-webkit-scrollbar {
+				width: 10px;
+				height: 10px;
+				background-color: rgba(0,0,0,0);
+				-webkit-border-radius: 100px;
+			}
+			::-webkit-scrollbar:hover {
+				background-color: rgba(0, 0, 0, 0.09);
+			}
+
+			::-webkit-scrollbar-thumb {
+				background: rgba(255,255,255,0.5);
+				-webkit-border-radius: 100px;
+				background-clip: padding-box;
+				border: 2px solid rgba(0, 0, 0, 0);
+				min-height: 16px;
+				transition: 0.1s;
+			}
+			::-webkit-scrollbar-thumb:active {
+				background: rgba(255,255,255,0.7);
+				-webkit-border-radius: 100px;
+			}
+			#invisible {
+				display: none !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="noloading" style="display: none;">
+			<div class="title" id="question"></div>
+			<div style="display: none;" class="imagecontainer" id="coversamplecontainer"><div class="image" id="coversample"></div></div>
+			<div id="optionbox"></div>
+			<div style="display: none;" id="nextbtn" class="next disabled"><span id="nexttext">Next</span><img src="../images/ic_navigate_next_black_24dp_2x.png" /></div>
+			<div style="display: none;" id="addbtn" class="next disabled"><span id="addtext">Add to TunePlay</span><img src="../images/ic_add_black_24dp_2x.png" /></div>
+		</div>
+		<div id="loading">
+			<div class="spinner"></div><br>
+			<div id="loadingtext">Loading...</div>
+		</div>
+		<div id="invisible"></div>
+	</body>
+	<script src="sc-api.js"></script>
+	<script src="add.js"></script>
+</html>

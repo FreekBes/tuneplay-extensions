@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				margin: 0px;
+				padding: 10px 0px;
+				background-color: #1A1A1A;
+				color: #EDEDED;
+				transition: 0.1s;
+				max-height: 324px;
+				overflow-y: auto;
+				overflow-x: hidden;
+				font-family: "Segoe UI", Tahoma, Arial, Helvetica, sans-serif;
+			}
+			.button {
+				display: block;
+				cursor: pointer;
+				padding: 8px 14px;
+				line-height: 20px;
+				font-size: 14px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				background-color: rgba(255,255,255,0);
+				transition: 0.3s;
+			}
+			.button:hover {
+				background-color: rgba(255,255,255,0.2);
+				transition: 0.05s;
+			}
+			#installupdates {
+				color: #FFCB2E;
+			}
+			.button > img {
+				height: 20px;
+				width: 20px;
+				vertical-align: middle;
+				display: inline-block;
+			}
+			.button > span {
+				vertical-align: middle;
+				display: inline-block;
+				margin-left: 14px;
+				margin-right: 0;
+				text-align: left;
+				text-transform: uppercase;
+			}
+			/* VERSION */
+			#extversion {
+				display: block;
+				float: right;
+				text-align: right;
+				font-size: 9px;
+				color: #919191;
+				padding: 6px;
+			}
+			/* SELECTION */
+			::-moz-selection {
+				color: #111;
+				background-color: #FFCB2E;
+				text-shadow: initial;
+			}
+			::selection {
+				color: #111;
+				background-color: #FFCB2E;
+				text-shadow: initial;
+			}
+			/* SCROLLBAR */
+			::-webkit-scrollbar {
+				width: 10px;
+				height: 10px;
+				background-color: rgba(0,0,0,0);
+				-webkit-border-radius: 100px;
+			}
+			::-webkit-scrollbar:hover {
+				background-color: rgba(0, 0, 0, 0.09);
+			}
+
+			::-webkit-scrollbar-thumb {
+				background: rgba(255,255,255,0.5);
+				-webkit-border-radius: 100px;
+				background-clip: padding-box;
+				border: 2px solid rgba(0, 0, 0, 0);
+				min-height: 16px;
+				transition: 0.1s;
+			}
+			::-webkit-scrollbar-thumb:active {
+				background: rgba(255,255,255,0.7);
+				-webkit-border-radius: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="installupdates" class="button" style="display: none;"><img src="../images/ic_system_update_alt_white_24dp_2x.png" /><span id="updatetext">Update available!</span></div>
+		<div id="mainmenu" style="display: none;">
+		<div id="addtrack" class="button"><img src="../images/ic_add_white_24dp_2x.png" /><span>Add a track to TunePlay</span></div>
+			<div id="opentp" class="button"><img src="../images/ic_open_in_new_white_24dp_2x.png" /><span>Open TunePlay</span></div>
+			<div id="opentpe" class="button"><img src="../images/ic_open_in_new_white_24dp_2x.png" /><span>TunePlay Editor</span></div>
+			<div id="openspi" class="button"><img src="../images/ic_open_in_new_white_24dp_2x.png" /><span>Spotify Importer</span></div>
+		</div>
+		<div id="loginmenu" style="display: none;">
+			<div id="login" class="button"><img src="../images/ic_account_circle_white_24dp_2x.png" /><span>Sign in to TunePlay</span></div>
+		</div>
+		<div id="extversion">TunePlay Universal Extension, version </div>
+	</body>
+	<script src="popup.js"></script>
+</html>
