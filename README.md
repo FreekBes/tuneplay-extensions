@@ -22,8 +22,8 @@ The official browser extension for TunePlay is available for Google Chrome, Mozi
 > Currently, all Windows users will always see an information bubble with "Disable developer mode extensions" when they start Chrome or open a new incognito window, which is really annoying. The only way for Windows users to use unpacked extensions without such dialogs is to switch to Chrome on the developer channel, by installing [the developer version of Google Chrome](https://www.google.com/chrome/browser/index.html?extra=devchannel#eula).
 
 ### Firefox
-1. Navigate to the downloaded `.xpi`-file in the File Explorer.
-2. Open the file by double clicking, then press "Install".
+1. Click on the download link above in Firefox.
+2. In the dialog, press 'Allow' or 'Trust' or anything like this. Then choose 'Install'.
 
 ### Opera
 1. Navigate to the downloaded `.nex`-file in the File Explorer.
