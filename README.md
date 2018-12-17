@@ -2,6 +2,13 @@
 
 The official browser extension for TunePlay is available for Google Chrome, Mozilla Firefox and Opera!
 
+## Functionality
+
+Using this extension, you can easily add tracks from YouTube, Soundcloud and Mixcloud. Do so by opening the track you want to add on the corresponding website, start playing it, then click the extension button up top and select 'Add a track to TunePlay'. Follow the instructions on screen. *Please do not forget to add the correct artists as well when the TunePlay Editor gets opened*!
+
+You can also search for stuff on TunePlay more easily. Just start typing `TunePlay` in the address bar, followed by what you'd like to search for! Your browser will then automatically search on TunePlay instead of using Google. Select the result you want using the arrow buttons or your mouse.
+
+
 ## Download
 
 **Select your browser:**
