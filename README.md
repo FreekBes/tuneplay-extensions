@@ -11,14 +11,6 @@ You can also search for stuff on TunePlay more easily. Just start typing `TunePl
 
 ## Download & installation
 
-**Select your browser:**
-* [Google Chrome]()
-* [Mozilla Firefox]()
-* [Opera]()
-
-
-## Installation
-
 ### Google Chrome
 1. [Download this repository](https://github.com/FreekBes/tuneplay-extensions/archive/master.zip).
 2. Unzip the downloaded ZIP file, then open Google Chrome.
