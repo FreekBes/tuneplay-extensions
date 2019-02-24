@@ -11,14 +11,6 @@ You can also search for stuff on TunePlay more easily. Just start typing `TunePl
 
 ## Download & installation
 
-**Select your browser:**
-* [Google Chrome]()
-* [Mozilla Firefox]()
-* [Opera]()
-
-
-## Installation
-
 ### Google Chrome
 1. [Download this repository](https://github.com/FreekBes/tuneplay-extensions/archive/master.zip).
 2. Unzip the downloaded ZIP file, then open Google Chrome.
@@ -42,8 +34,11 @@ You can also search for stuff on TunePlay more easily. Just start typing `TunePl
 
 ## Updating the extension
 
-### Google Chrome & Opera
+### Opera
 When an update is available, the extension will notify you when you open it. A button will appear up top, letting you know an update is available. Upon clicking this button, the update will then start downloading. Please wait for this to finish (this should not take too long). When the download is finished, the download button will turn into an 'Install' button. Press this button to install the update.
 
 ### Mozilla Firefox
 The Firefox version of TunePlay will install updates automatically!
+
+### Google Chrome
+On Google Chrome, you will need to update manually by following the installation instructions above again. The extension will let you know when an update is available upon opening.
