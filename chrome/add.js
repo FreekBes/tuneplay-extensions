@@ -724,12 +724,18 @@ function addToTP() {
 	if (trackTitle == null) {
 		trackTitle = document.getElementById("option-selected").innerText;
 	}
+	var params = "";
 	// console.log(trackTitle);
 	if (trackTitle == "None of the above" || trackTitle == null || trackTitle == "" || trackTitle == "None of the above (specify)") {
-		var params = urlIdType+"="+urlId;
+		params = urlIdType+"="+urlId;
 	}
 	else {
-		var params = "title="+encodeURIComponent(trackTitle)+"&"+urlIdType+"="+urlId;
+		if (editId == "None of the above" || editId == null) {
+			params = "title="+encodeURIComponent(trackTitle)+"&"+urlIdType+"="+urlId;
+		}
+		else {
+			params = urlIdType+"="+urlId;
+		}
 	}
 	
 	if (trackCover == "Yes" && trackCoverUrl != "" && trackCoverUrl != null) {
