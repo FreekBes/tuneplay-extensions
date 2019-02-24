@@ -766,7 +766,7 @@ function addToTP() {
 		// the string is only used for on-screen text afterwards.
 	}
 	
-	var editUrl = 'https://www.tuneplay.net/edittrack.php?editor=TunePlay%20for%20Opera';
+	var editUrl = 'https://www.tuneplay.net/edittrack.php?editor=TunePlay%20for%20Firefox';
 	if (editId == "None of the above" || editId == null) {
 		editUrl += "&create=true";
 	}
