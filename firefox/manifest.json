@@ -10,7 +10,7 @@
 	"manifest_version": 2,
 	"name": "TunePlay",
 	"short_name": "TunePlay",
-	"version": "2.8.1",
+	"version": "2.8.2",
 	"homepage_url": "https://www.tuneplay.net",
 	
 	"description": "The official TunePlay extension, which lets you easily add tracks from YouTube, Soundcloud and Mixcloud. Also adds a handy search function in the address bar: just start your search with 'tuneplay'!",
@@ -20,6 +20,8 @@
 		"48": "images/logo48.png",
 		"128": "images/logo128.png"
 	},
+	"content_scripts": [
+	],
 	
 	"permissions": [
 		"tabs",
