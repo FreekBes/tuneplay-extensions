@@ -9,7 +9,21 @@ Using this extension, you can easily add tracks from YouTube, Soundcloud and Mix
 You can also search for stuff on TunePlay more easily. Just start typing `TunePlay` in the address bar, followed by what you'd like to search for! Your browser will then automatically search on TunePlay instead of using Google. Select the result you want using the arrow buttons or your mouse.
 
 
-## Download & installation
+## Download
+
+For Opera & Mozilla Firefox, download the installer from the [releases](https://github.com/FreekBes/tuneplay-extensions/releases) page. For instructions or if you're using Google Chrome, read the installation section below.
+
+
+## Installation
+
+### Opera
+1. Open the `.nex` file downloaded from the [releases](https://github.com/FreekBes/tuneplay-extensions/releases) page.
+2. When Opera opens, click on the button 'Go to extensions' (in the banner up top). If Opera does not open automatically, open Opera, then press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd>.
+3. Press the 'Install' button next to TunePlay (and then choose 'Yes, install').
+
+### Mozilla Firefox
+1. Open the `.xpi` file downloaded from the [releases](https://github.com/FreekBes/tuneplay-extensions/releases) page.
+2. In the dialog, press 'Allow' or 'Trust' or anything like this. Then choose 'Install'.
 
 ### Google Chrome
 1. [Download this repository](https://github.com/FreekBes/tuneplay-extensions/archive/master.zip).
@@ -20,16 +34,6 @@ You can also search for stuff on TunePlay more easily. Just start typing `TunePl
 6. Navigate to the directory of the unpacked ZIP file and select the directory `chrome`. Then press OK.
 
 > Currently, all Windows users will always see an information bubble with "Disable developer mode extensions" when they start Chrome or open a new incognito window, which is really annoying. The only way for Windows users to use unpacked extensions without such dialogs is to switch to Chrome on the developer channel, by installing [the developer version of Google Chrome](https://www.google.com/chrome/browser/index.html?extra=devchannel#eula).
-
-### Mozilla Firefox
-1. Click [here](https://www.tuneplay.net/downloads/tuneplay-for-firefox.xpi) to start the installation directly from Firefox itself.
-2. In the dialog, press 'Allow' or 'Trust' or anything like this. Then choose 'Install'.
-
-### Opera
-1. Download the installer [here](https://www.tuneplay.net/downloads/tuneplay-for-opera.nex).
-2. Open the `.nex` file using the download history or your File Explorer.
-3. When Opera opens, click on the button 'Go to extensions' (in the banner up top). If Opera does not open automatically, open Opera, then press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd>.
-4. Press the 'Install' button next to TunePlay (and then choose 'Yes, install').
 
 
 ## Updating the extension
