@@ -201,7 +201,6 @@ chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
 							addOption("Performance", "trackType");
 							addOption("Broadcast", "trackType");
 							addOption("Mix", "trackType");
-							addOption("Podcast", "trackType");
 							nextBtn.style.display = "block";
 							addBtn.style.display = "none";
 							nextBtn.onclick = function(event) {
@@ -415,7 +414,6 @@ chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
 															addOption("Performance", "trackType");
 															addOption("Broadcast", "trackType");
 															addOption("Mix", "trackType");
-															addOption("Podcast", "trackType");
 															if (responseJSON["artwork_url"] != null) {
 																nextBtn.style.display = "block";
 																addBtn.style.display = "none";
@@ -582,7 +580,6 @@ chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
 												addOption("Performance", "trackType");
 												addOption("Broadcast", "trackType");
 												addOption("Mix", "trackType");
-												addOption("Podcast", "trackType");
 												nextBtn.style.display = "block";
 												addBtn.style.display = "none";
 												nextBtn.onclick = function(event) {
@@ -756,9 +753,6 @@ function addToTP() {
 	}
 	else if (trackType == "Mix") {
 		params += "&type=5";
-	}
-	else if (trackType == "Podcast") {
-		params += "&type=6";
 	}
 	else {
 		trackType = "Track";
