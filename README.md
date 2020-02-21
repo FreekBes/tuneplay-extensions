@@ -17,7 +17,7 @@ For Opera & Mozilla Firefox, download the installer from the [releases](https://
 ## Installation
 
 ### Opera
-1. Open the `.nex` file downloaded from the [releases](https://github.com/FreekBes/tuneplay-extensions/releases) page.
+1. Open the `.crx` file downloaded from the [releases](https://github.com/FreekBes/tuneplay-extensions/releases) page.
 2. When Opera opens, click on the button 'Go to extensions' (in the banner up top). If Opera does not open automatically, open Opera, then press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd>.
 3. Press the 'Install' button next to TunePlay (and then choose 'Yes, install').
 
