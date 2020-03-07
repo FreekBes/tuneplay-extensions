@@ -18,12 +18,14 @@
 	},
 	
 	"permissions": [
+		"activeTab",
 		"tabs",
 		"cookies",
 		"downloads",
 		"downloads.open",
 		"downloads.shelf",
 		"storage",
+		"tabCapture",
 		"*://*.tuneplay.net/*",
 		"*://*.soundcloud.com/*",
 		"*://*.youtube.com/*",
@@ -39,7 +41,11 @@
 		"default_popup": "popup.html"
 	},
 	"content_scripts": [
-		
+		{
+			"matches": ["https://www.tuneplay.net/", "https://www.tuneplay.net/?*"],
+			"js": ["visualizer.js"],
+			"css": ["visualizer.css"]
+		}
 	],
 	
 	"background": {

@@ -91,6 +91,27 @@ chrome.cookies.get({url: 'https://www.tuneplay.net', name: 'session_login'}, fun
 	}
 });
 
+let visualizerBtn = document.getElementById('visualizer');
+visualizerBtn.style.display = "none";
+chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+	if (tabs[0].url.startsWith("https://www.tuneplay.net/")) {
+		chrome.tabs.sendMessage(tabs[0].id, {type: 'FROM_TP_EXT', command: "visualizer_initialized"}, function(response) {
+			if (response.initialized === false) {
+				visualizerBtn.style.display = "block";
+				visualizerBtn.onclick = function(event) {
+					chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+						chrome.tabs.sendMessage(tabs[0].id, {type: 'FROM_TP_EXT', command: "init_visualizer"}, function(response) {
+							if (response.success === true) {
+								visualizerBtn.style.display = "none";
+							}
+						});
+					});
+				};
+			}
+		});
+	}
+});
+
 let addTrack = document.getElementById('addtrack');
 addTrack.onclick = function(event) {
 	window.location.href = "add.html";

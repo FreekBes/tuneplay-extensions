@@ -94,3 +94,84 @@ chrome.omnibox.onInputEntered.addListener(function(text, disposition) {
 		chrome.tabs.update(null, {url: text});
 	}
 });
+
+var visData = {
+	audioAnalyser: null,
+	audioFreqDataArray: null,
+	ctx: null,
+	source: null,
+	audioOut: null
+};
+
+function sendVisFrequencyData() {
+	visData.audioAnalyser.getByteFrequencyData(visData.audioFreqDataArray);
+	return Array.from(visData.audioFreqDataArray);
+}
+
+// audio capture for visualizer
+function getAudioContext() {
+	return new Promise(function(resolve, reject) {
+		try {
+			if (visData.ctx != null) {
+				resolve(visData.ctx);
+			}
+			else {
+				chrome.tabs.query({active: true, currentWindow: true, url: "https://www.tuneplay.net/"}, function(tabs) {
+					chrome.tabCapture.capture({audio: true}, function(stream) {
+						if (stream != null) {
+							// set-up the audio context
+							visData.ctx = new AudioContext();
+							visData.source = visData.ctx.createMediaStreamSource(stream);
+							
+							// set-up the analyser
+							visData.audioAnalyser = visData.ctx.createAnalyser();
+							visData.audioAnalyser.fftSize = 512;
+							visData.audioFreqDataArray = new Uint8Array(visData.audioAnalyser.frequencyBinCount);
+							visData.source.connect(visData.audioAnalyser);
+							
+							// connect audio source back to the destination in order to keep the audio playing in the tab
+							visData.source.connect(visData.ctx.destination);
+
+							resolve(visData.ctx);
+						}
+						else {
+							reject("tabCapture stream equals null");
+						}
+					});
+				});
+			}
+		}
+		catch(err) {
+			reject(err.message);
+		}
+	});
+}
+
+chrome.runtime.onConnect.addListener(function(port) {
+	if (port.name == "tp_visualizer") {
+		port.onMessage.addListener(function(data) {
+			switch(data.command) {
+				case "ping":
+					port.postMessage({result: "ping", success: true});
+					break;
+				case "init_audio_context":
+					getAudioContext().then(function(audioContext) {
+						port.postMessage({result: "init_audio_context", success: true});
+					}).catch(function(errorMessage) {
+						port.postMessage({result: "init_audio_context", success: false, error: errorMessage});
+					});
+					break;
+				case "get_frequencies":
+					port.postMessage({result: "get_frequencies", success: true, freq: sendVisFrequencyData()});
+					break;
+				case "garbage_collect":
+					visData.audioAnalyser = null;
+					visData.audioFreqDataArray = null;
+					visData.ctx = null;
+					visData.source = null;
+					visData.audioOut = null;
+					break;
+			}
+		});
+	}
+});
