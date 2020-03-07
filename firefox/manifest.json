@@ -12,7 +12,7 @@
 	"short_name": "TunePlay",
 	"version": "3.0.1",
 	"homepage_url": "https://www.tuneplay.net",
-	"description": "The official TunePlay extension, which lets you easily add tracks from YouTube, Soundcloud and Mixcloud. Furthermore, it adds visualizations to TunePlay, as well as a handy search function in the address bar: just start your search with 't '!",
+	"description": "The official TunePlay extension, which lets you easily add tracks from YouTube, Soundcloud and Mixcloud. Furthermore, it adds a handy search function in the address bar: just start your search with 't '!",
 	"icons": {
 		"16": "images/logo16.png",
 		"32": "images/logo32.png",
