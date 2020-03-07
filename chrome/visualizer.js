@@ -129,7 +129,6 @@ var visualizer = {
         console.log("Visualizer looper set");
         visualizer.loading = false;
         visualizer.ready = true;
-        visualizer.show();
     },
 
     getAudioFrequencies: function() {
@@ -183,7 +182,7 @@ var visualizer = {
         visualizerButton.setAttribute("class", "optionbtn material-icons");
         visualizerButton.setAttribute("title", "Show visualizer");
         visualizerButton.setAttribute("onclick", "window.postMessage({type: 'TP_VISUALIZER_EVENT', command: 'vis_button'}, '*');");
-        visualizerButton.innerHTML = "&#xe24b;";
+        visualizerButton.innerHTML = "&#xe1b8;";
         document.getElementById("optionswrapper").appendChild(visualizerButton);
 
         visualizer.canvas = document.createElement("canvas");

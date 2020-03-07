@@ -126,6 +126,7 @@ function getAudioContext() {
 							// set-up the analyser
 							visData.audioAnalyser = visData.ctx.createAnalyser();
 							visData.audioAnalyser.fftSize = 512;
+							visData.audioAnalyser.smoothingTimeConstant = 0.7;
 							visData.audioFreqDataArray = new Uint8Array(visData.audioAnalyser.frequencyBinCount);
 							visData.source.connect(visData.audioAnalyser);
 							
