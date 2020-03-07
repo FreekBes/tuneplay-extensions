@@ -707,6 +707,7 @@ chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
 				url: "https://www.tuneplay.net/edit.php?type=track",
 				active: true
 			});
+			window.close();
 		};
 		nextBtn.style.display = "none";
 		addBtn.style.display = "none";
@@ -787,6 +788,7 @@ function addToTP() {
 						url: "https://www.tuneplay.net/edit.php?type=track&id=" + responseJSON[i]["id"],
 						active: true
 					});
+					window.close();
 				}
 			}
 			
